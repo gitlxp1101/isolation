@@ -81,12 +81,15 @@
 
     <resources>
       <resource>
+        <!--根据不同的环境deploy.type值也会不同-->
         <directory>src/main/resources.${deploy.type}</directory>
+        <!--排除不需要打包的文件-->
         <excludes>
           <exclude>*.jsp</exclude>
         </excludes>
       </resource>
       <resource>
+        <!--这个也是maven默认会打包的文件夹-->
         <directory>src/main/resources</directory>
       </resource>
     </resources>
