@@ -78,6 +78,16 @@
 
   <build>
     <finalName>isolation</finalName>
+
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <!-- 启用过滤 -->
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+
+
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
@@ -112,4 +122,34 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <person.name>tom</person.name>
+        <person.age>18</person.age>
+      </properties>
+      <build>
+        <filters>
+          <filter> filter-dev.properties</filter>
+        </filters>
+      </build>
+    </profile>
+
+    <profile>
+      <id>prod</id>
+      <properties>
+        <person.name>jack</person.name>
+        <person.age>55</person.age>
+      </properties>
+      <build>
+        <filters>
+          <filter> filter-prod.properties</filter>
+        </filters>
+      </build>
+    </profile>
+  </profiles>
+
+
 </project>

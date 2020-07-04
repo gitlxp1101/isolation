@@ -30,7 +30,14 @@
     </bean>
 
 
+    <bean id="person" class="com.example.domain.Person">
+        <property name="name" value="${person.name}"></property>
+        <property name="age" value="${person.age}"></property>
+    </bean>
 
+    <bean id="school" class="com.example.domain.School">
+        <property name="shcoolName" value="${school.name}"></property>
+    </bean>
 
 
 </beans>
