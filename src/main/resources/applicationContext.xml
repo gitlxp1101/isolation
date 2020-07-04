@@ -29,7 +29,9 @@
         <property name="fileEncoding" value="utf-8"/>
     </bean>
 
-
+    <bean id="student" class="com.example.domain.Student">
+        <property name="studentName" value="${studen.name}"></property>
+    </bean>
 
 
 
