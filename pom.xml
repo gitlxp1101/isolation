@@ -85,7 +85,6 @@
         <excludes>
           <exclude>*.jsp</exclude>
         </excludes>
-
       </resource>
       <resource>
         <directory>src/main/resources</directory>
@@ -136,6 +135,14 @@
       <properties>
         <deploy.type>dev</deploy.type>
       </properties>
+
+      <!--<build>-->
+        <!--<resources>-->
+          <!--<resource>-->
+            <!--<directory>src/main/resources.dev</directory>-->
+          <!--</resource>-->
+        <!--</resources>-->
+      <!--</build>-->
     </profile>
 
 
@@ -144,7 +151,16 @@
       <properties>
         <deploy.type>prod</deploy.type>
       </properties>
+
+      <!--<build>-->
+        <!--<resources>-->
+          <!--<resource>-->
+            <!--<directory>src/main/resources.prod</directory>-->
+          <!--</resource>-->
+        <!--</resources>-->
+      <!--</build>-->
     </profile>
+
 
   </profiles>
 </project>
